@@ -6,12 +6,18 @@
  *
 **/
 
-
-
-
-
-
-
+function getCapitalLetters(sentence){
+	let upperArray = []
+	let letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+	for(let i = 0; i < sentence.length; i++){
+		// console.log("Posición en el arreglo de " + sentence[i] + " = " + letters.indexOf(sentence[i]));
+		if(letters.indexOf(sentence[i]) >= 0){
+			upperArray.push(sentence[i])
+		}
+	}
+	console.log(upperArray)
+	return upperArray
+}
 
 
 //*~*~*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*~*~*~*~

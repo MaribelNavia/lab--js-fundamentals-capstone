@@ -8,7 +8,25 @@
  * - for every number that is a multiple of 3 and 5, return "FizZBuzZ"
 **/
 
-
+function fizzbuzz(n){
+	let residue = ""
+	const name1 = "."
+	const name2 = "fizz"
+	const name3 = "buzz"
+	const name4 = "FizZBuzZ"
+	for (let i = 1; i <=n ; i++){
+		if (i % 3 !== 0 && i % 5 !== 0){
+			residue += name1;
+		} else if (i % 3 === 0 && i % 5 !== 0){
+			residue += name2;
+		} else if (i % 5 === 0 && i % 3 !== 0){
+			residue += name3;
+		} else if (i % 3 === 0 && i % 5 === 0){
+			residue +=  name4;
+		}
+	}
+	return residue
+}
 
 
 /**

@@ -5,11 +5,11 @@
  * true or false based on whether that integer is odd or even
  *
 **/
-
-
-
-
-
+function isEven(number){
+	// console.log(number % 2)
+	// console.log(number % 2 === 0)
+	return number % 2 === 0 
+}
 
 //*~*~*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*~*~*~*~
 console.log("[1] Should return false for 1");

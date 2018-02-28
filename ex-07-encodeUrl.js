@@ -21,6 +21,18 @@
 **/
 
 
+function encodeURL(dates) {
+	var lettersAndNumbers = dates
+	const wordSigns = ['%', '!', '\"', '$', '\'', ' ']
+	const singnsAndNumbers = ['%25', '%21', '%22', '%24', '%27', '%20']
+	for (let i= 0; i < wordSigns.length; i++){
+		lettersAndNumbers = lettersAndNumbers.split(wordSigns[i])
+		lettersAndNumbers = lettersAndNumbers.join(singnsAndNumbers[i])
+	}
+	return lettersAndNumbers
+}
+
+
 
 
 

@@ -8,7 +8,15 @@
  * pluck(stooges, 'name') should yield the array, ['moe','larry','curly']
  *
 **/
-
+function pluck(list, prop){
+	let array = []
+	for (let i= 0; i < list.length; i++){
+		let value = ""
+		value = list[i][prop]
+		array.push(value)
+	}
+	return array
+}
 
 //*~*~*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*~*~*~*~
 

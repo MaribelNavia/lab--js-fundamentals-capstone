@@ -10,6 +10,16 @@
 
 
 
+function getWordCount(dates){
+	var signsAndNumbers = dates
+	const signs = ['%', '!', '\"', '$', '\'', ' ']
+	const numbers = ['%25', '%21', '%22', '%24', '%27', '%20']
+	for (let i = 0; i < numbers.length; i++){
+		signsAndNumbers = signsAndNumbers.split(signs[i])
+		signsAndNumbers = signsAndNumbers.join(numbers[i])
+	}
+	return signsAndNumbers
+}
 
 
 

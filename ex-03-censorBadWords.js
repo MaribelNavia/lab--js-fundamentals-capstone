@@ -6,12 +6,23 @@
  *
  *
 **/
+function censorBadWords(badWordsArray, sentence){
+	let sentenceToArray = sentence.split(" ")
+	for(let i = 0; i < sentenceToArray.length; i++){
+		// console.log("buscar: " + sentenceToArray[i] + " = " + badWordsArray.indexOf(sentenceToArray[i]))
+		if(badWordsArray.indexOf(sentenceToArray[i]) >= 0){
+			sentence = sentence.replace(sentenceToArray[i], "****")
+		}
+	} return sentenceToArray
+}
+
+
 
 var badWordsList = ['heck', 'darn', 'dang', 'crappy', 'crud', 'crap', 'freaking']
 var badWords2 = ['idiot',  'crap', 'freaking']
 
-var censored1 = censorBadWords(badWords, "mom get the heck in here and bring me a darn sandwich"
-var censored2 = censorBadWords(badWords, "here son, your crappy sandwich is on the dang plate")
+var censored1 = censorBadWords(badWordsList, "mom get the heck in here and bring me a darn sandwich")
+var censored2 = censorBadWords(badWordsList, "here son, your crappy sandwich is on the dang plate")
 var censored3 = censorBadWords(badWords2, "your freaking idiot dog left crap on my floor")
 
 console.log("[1] Expected: 'mom get the **** in here and bring me a **** sandwich'");

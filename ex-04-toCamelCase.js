@@ -6,8 +6,23 @@
  * and returns a string that follows camel case convention
  *
  */
-
-
+function toCamelCase(string) {
+	let camel = string.toLowerCase()
+	const array = camel.split(' ')
+	let tempWord = ''
+	let tempFinArr = []
+	
+tempFinArr.push(array[0])
+	let camelRes = ""
+	for (let i = 1; i < array.length; i++){
+		tempWord = array[i]
+		let tempArr = tempWord.split('')
+		tempArr[0] = tempArr[0].toUpperCase()
+		tempWord = tempArr.join('')
+		tempFinArr.push(tempWord)
+	}
+	camelRes = tempFinArr.join('')
+	return camelRes
 
 
 
